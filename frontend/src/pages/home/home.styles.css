@@ -1,0 +1,38 @@
+.main-page-container {
+  width: 100vw;
+  height: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50px 1fr 300px;
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: fuchsia;
+}
+
+.main-page-container section {
+  padding: 5px;
+  border: 1px solid rgb(253, 252, 252);
+}
+
+.navbar-header-section {
+  grid-column: 1 / -1;
+}
+.left-side-nav {
+  grid-column: 1 /2;
+  grid-row: 2 / 3;
+}
+.main-content-section {
+  grid-column: 2 /4;
+  grid-row: 2 / 3;
+}
+
+.right-side-nav {
+  grid-column: 4 / -1;
+  grid-row: 2 / 3;
+}
+
+.footer-section {
+  grid-column: 1 / -1;
+  grid-row: 3 / -1;
+}

@@ -1,13 +1,21 @@
-import React from 'react'
+import React from "react";
 import "./home.styles.css";
+import HeaderNavigation from "../../components/header";
 
+const Index = () => {
+  return (
+    <>
+      <section className="main-page-container">
+        <section className="navbar-header-section">
+            <HeaderNavigation />
+        </section>
+        <section className="left-side-nav"> </section>
+        <section className="main-content-section"></section>
+        <section className="right-side-nav"> </section>
+        <section className="footer-section"></section>
+      </section>
+    </>
+  );
+};
 
-const Index=() =>{
-    return (
-        <>
-            home page here
-        </>
-    )
-}
-
-export default Index
+export default Index;
