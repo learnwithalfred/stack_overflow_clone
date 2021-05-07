@@ -1,13 +1,18 @@
-import React from 'react';
+import React from "react";
 import "./jobs.styles.css";
+import JobCard from "../../components/job.card";
 
+const Index = (props) => {
+  //console.log(props);
+  const renderJobList = props.jobs.map(({ id, ...rest }) => {
+    return <JobCard {...rest} key={id} />;
+  });
 
-const Index =()=> {
-    return (
-        <>
-            jobs page here
-        </>
-    )
-}
+  return (
+    <>
+      <div>{renderJobList}</div>
+    </>
+  );
+};
 
-export default Index
+export default Index;
