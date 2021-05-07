@@ -9,7 +9,8 @@ import Home from "./pages/home";
 import Companies from "./pages/companies";
 import Question from "./pages/questions";
 import Jobs from "./pages/jobs";
-import Users from "./pages/users";
+import Admin from "./pages/admin";
+//import Users from "./pages/users";
 import NotFound from "./pages/404";
 import api from "./api";
 import React, { useEffect, useState } from "react";
@@ -34,14 +35,14 @@ const App = () => {
   }, []);
 
   //create new job
-  // const addJobHandler = async (job) => {
-  //   const request = {
-  //     ...job,
-  //   };
+  const addJobHandler = async (job) => {
+    const request = {
+      ...job,
+    };
 
-  //   const response = await api.post("/jobs", request);
-  //   setJobs([...jobs, response.data]);
-  // };
+    const response = await api.post("/jobs", request);
+    setJobs([...jobs, response.data]);
+  };
 
   //fetch companies
   const fetchCompanyData = async () => {
@@ -59,14 +60,14 @@ const App = () => {
   }, []);
 
   //create new company
-  // const handleNewCompany = async (company) => {
-  //   const request = {
-  //     ...company,
-  //   };
+  const handleNewCompany = async (company) => {
+    const request = {
+      ...company,
+    };
 
-  //   const response = await api.post("/company", request);
-  //   setJobs([...company, response.data]);
-  // };
+    const response = await api.post("/company", request);
+    setJobs([...company, response.data]);
+  };
 
 
 
@@ -90,11 +91,7 @@ const App = () => {
     <Router>
       <div>
         <Switch>
-          <Route
-            path="/"
-            exact
-            render={() => <Home />}
-          />
+          <Route path="/" exact render={() => <Home />} />
           <Route
             path="/companies"
             render={(props) => <Companies {...props} company={company} />}
@@ -103,8 +100,16 @@ const App = () => {
             path="/jobs"
             render={(props) => <Jobs {...props} jobs={jobs} />}
           />
-          <Route path="/users" render={() => <Users />} />
-
+          <Route
+            path="/admin"
+            render={(props) => (
+              <Admin
+                {...props}
+                addJobHandler={addJobHandler}
+                handleNewCompany={handleNewCompany}
+              />
+            )}
+          />
           <Route path="/jobs:id" render={() => <Jobs />} />
           <Route path="/companies:id" render={() => <Companies />} />
           <Route
