@@ -17,6 +17,8 @@ const Index = (props) => {
     e.preventDefault();
     props.addJobHandler(job);
     SetJobs(initialState);
+    console.log("lj;khj;hjjh  nbv", props);
+//    props.history.push("/")
   };
 
   return (

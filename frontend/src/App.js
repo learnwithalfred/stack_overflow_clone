@@ -7,10 +7,11 @@ import {
 
 import Home from "./pages/home";
 import Companies from "./pages/companies";
-import Question from "./pages/questions";
+import CompanyDetails from "./pages/companies/company.details";
 import Jobs from "./pages/jobs";
+import JobDetails from "./pages/jobs/job.details";
 import Admin from "./pages/admin";
-//import Users from "./pages/users";
+import Question from "./pages/questions";
 import NotFound from "./pages/404";
 import api from "./api";
 import React, { useEffect, useState } from "react";
@@ -18,7 +19,7 @@ import React, { useEffect, useState } from "react";
 const App = () => {
   const [company, setCompany] = useState([]);
   const [jobs, setJobs] = useState([]);
-  const [question, setQuestion] = useState([]);
+ const [question, setQuestion] = useState([]);
 
   //fetch jobs
   const fetchJobs = async () => {
@@ -69,10 +70,7 @@ const App = () => {
     setJobs([...company, response.data]);
   };
 
-
-
-
-  //fetch question
+  // //fetch question
   const fetchAllQuestions = async () => {
     const response = await api.get("/questions");
     //console.log("quetions data", response.data)
@@ -94,12 +92,19 @@ const App = () => {
           <Route path="/" exact render={() => <Home />} />
           <Route
             path="/companies"
-            render={(props) => <Companies {...props} company={company} />}
+            exact
+            render={(props) => <Companies {...props} companies={company} />}
           />
+          <Route path="/companies/:id" render={() => <CompanyDetails />} />
+
           <Route
             path="/jobs"
+            exact
             render={(props) => <Jobs {...props} jobs={jobs} />}
           />
+
+          <Route path="/jobs/:id" render={() => <JobDetails />} />
+
           <Route
             path="/admin"
             render={(props) => (
@@ -110,8 +115,7 @@ const App = () => {
               />
             )}
           />
-          <Route path="/jobs:id" render={() => <Jobs />} />
-          <Route path="/companies:id" render={() => <Companies />} />
+
           <Route
             path="/question"
             render={(props) => <Question {...props} question={question} />}

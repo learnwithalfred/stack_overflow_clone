@@ -1,6 +1,17 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
-const Index = ({ companyName, briefIntro, companyPicture, aboutCompany, createAt }) => {
+
+
+const Index = (props) => {
+  const {
+    id,
+    companyName,
+    briefIntro,
+    companyPicture,
+    aboutCompany,
+    createAt,
+  } = props.company;
   return (
     <>
       <ul>
@@ -9,6 +20,12 @@ const Index = ({ companyName, briefIntro, companyPicture, aboutCompany, createAt
         <li>{aboutCompany}</li>
         <li>{createAt}</li>
         <img src={companyPicture} alt={companyName} />
+        <Link
+          to={{
+            pathname: `/companies/${id}`,
+            state: { companies: props.company },
+          }}
+        >Details </Link>
       </ul>
     </>
   );
