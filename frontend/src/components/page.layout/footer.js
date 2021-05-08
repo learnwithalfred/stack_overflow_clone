@@ -14,7 +14,7 @@ function Footer() {
         <Grid divided inverted stackable>
           <Grid.Row>
             <Grid.Column width={3}>
-              <Header inverted as="h4" content="About" />
+              <Header inverted as="h4" content="Stack Overflow" />
               <List link inverted>
                 <List.Item as="a">Sitemap</List.Item>
                 <List.Item as="a">Contact Us</List.Item>

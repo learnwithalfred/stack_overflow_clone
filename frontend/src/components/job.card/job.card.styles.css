@@ -1,0 +1,19 @@
+
+.mini-description-card{
+  margin: 10px;
+}
+
+.float-items-right{
+    display: flex;
+    color: black;
+    align-items: center;
+}
+
+.move-icon-right {
+    margin-left: 15px;
+}
+
+
+.small-icon-link{
+    color: blue;
+}

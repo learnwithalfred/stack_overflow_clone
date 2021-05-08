@@ -7,7 +7,7 @@ const description = [
 ].join(" ");
 
 const CardExampleExtraContent = () => (
-  <Card>
+  <Card fluid>
     <Card.Content header="About Amy" />
     <Card.Content description={description} />
     <Card.Content extra>
