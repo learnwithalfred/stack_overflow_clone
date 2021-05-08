@@ -1,18 +1,8 @@
 import React from "react";
 import {
   Button,
-  Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  List,
   Menu,
   Input,
-  Segment,
-  Sidebar,
-  Visibility,
 } from "semantic-ui-react";
 
 function HeaderNavigation() {
