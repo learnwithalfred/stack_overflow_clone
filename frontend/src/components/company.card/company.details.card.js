@@ -10,7 +10,7 @@ function CompanyDetailsComponent() {
     <>
       <div>
         <TopNavigation />
-        <Grid celled>
+        <Grid>
           <Grid.Row>
             <Grid.Column width={3}>
               <LeftSideCard />
@@ -57,11 +57,6 @@ function CompanyDetailsComponent() {
                     {" "}
                     <Menu.Item>Company</Menu.Item>
                   </Link>
-                  <Link>
-                    {" "}
-                    <Menu.Item>Developer Culture</Menu.Item>
-                  </Link>
-                  <Menu.Item>More Jobs</Menu.Item>
                   <Menu.Menu position="right">
                     <Link>
                       <Menu.Item name="React to this job:" />
@@ -197,8 +192,7 @@ function CompanyDetailsComponent() {
 
               <h2>Similar jobs</h2>
             </Grid.Column>
-            <Grid.Column width={3}>
-            </Grid.Column>
+            <Grid.Column width={3}></Grid.Column>
           </Grid.Row>
         </Grid>
         <Footer />

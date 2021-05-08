@@ -7,7 +7,7 @@ function RightSideNav() {
   return (
     <Grid.Row>
       <Grid.Column width={3}>
-        <Menu text vertical>
+        <Menu pointing secondary vertical color="red">
           <Menu.Item as="a">
             {" "}
             <Link to="/">Home</Link>

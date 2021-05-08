@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Item, Button, Icon } from "semantic-ui-react";
+import { Card, Item, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import "./job.card.styles.css";
 
