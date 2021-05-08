@@ -1,11 +1,12 @@
 import React from "react";
-import "./home.styles.css";
-import HeaderNavigation from "../../components/header";
-
+//import "./home.styles.css";
+//import HeaderNavigation from "../../components/header";
+import PageSetup from "../../components/page.layout";
 const Index = () => {
   return (
     <>
-      <section className="main-page-container">
+    <PageSetup  />
+      {/* <section className="main-page-container">
         <section className="navbar-header-section">
             <HeaderNavigation />
         </section>
@@ -13,7 +14,7 @@ const Index = () => {
         <section className="main-content-section"></section>
         <section className="right-side-nav"> </section>
         <section className="footer-section"></section>
-      </section>
+      </section> */}
     </>
   );
 };
