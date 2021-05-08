@@ -11,6 +11,7 @@ import CompanyDetails from "./pages/companies/company.details";
 import Jobs from "./pages/jobs";
 import JobDetails from "./pages/jobs/job.details";
 import Admin from "./pages/admin";
+import Users from "./pages/users";
 import Question from "./pages/questions";
 import NotFound from "./pages/404";
 import api from "./api";
@@ -96,15 +97,12 @@ const App = () => {
             render={(props) => <Companies {...props} companies={company} />}
           />
           <Route path="/companies/:id" render={() => <CompanyDetails />} />
-
           <Route
             path="/jobs"
             exact
             render={(props) => <Jobs {...props} jobs={jobs} />}
           />
-
           <Route path="/jobs/:id" render={() => <JobDetails />} />
-
           <Route
             path="/admin"
             render={(props) => (
@@ -115,12 +113,13 @@ const App = () => {
               />
             )}
           />
-
           <Route
             path="/question"
             render={(props) => <Question {...props} question={question} />}
           />
+          <Route path="/users" component={Users} />
           <Route path="/404" component={NotFound} />
+
           <Redirect to="/404" />
         </Switch>
       </div>

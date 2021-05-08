@@ -1,13 +1,10 @@
-// import React from 'react'
+import React from 'react'
 import { Card, Item, Button, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import "./job.card.styles.css";
 
-
-
-
 const Index = (props) => {
-  const { id, name, role, jobDescription, createdAt } = props.job;
+  const { id, name, role, jobDescription } = props.job;
   return (
     <>
       <Card fluid>
@@ -15,10 +12,12 @@ const Index = (props) => {
           <Link to={{ pathname: `/jobs/${id}`, state: { jobs: props.job } }}>
             <Item.Group>
               <Item>
-                <Item.Image
-                  size="tiny"
-                  src="https://i.stack.imgur.com/pG1OB.jpg?s=64"
-                />
+                <div className="image-avator">
+                  <Item.Image
+                    size="tiny"
+                    src="https://i.stack.imgur.com/pG1OB.jpg?s=64"
+                  />
+                </div>
 
                 <Item.Content>
                   <Item.Header as="a">{name}</Item.Header>
@@ -43,8 +42,15 @@ const Index = (props) => {
                       <div className="move-icon-right">
                         <span className="small-icon-link"> react.js</span>
                       </div>
+                    </div>
+
+                    <div className="float-items-right">
+                      <li className="small-icon-link-mini"> 23 hr ago</li>
                       <div className="move-icon-right">
-                        <Button size="mini" primary className="small-icon-link"> 2+ jobs</Button>
+                        <li className="small-icon-link-mini">$1200,000 </li>
+                      </div>
+                      <div className="move-icon-right">
+                        <li className="small-icon-link-mini"> visa  sponsored</li>
                       </div>
                     </div>
                   </Item.Extra>
@@ -58,8 +64,4 @@ const Index = (props) => {
   );
 };
 
-
-export default Index
-
-
-
+export default Index;

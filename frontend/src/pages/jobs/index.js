@@ -25,10 +25,10 @@ const Index = (props) => {
           <Grid.Column width={3}>
             <LeftSideCard />
           </Grid.Column>
-          <Grid.Column width={8}>
+          <Grid.Column width={4}>
             <div>{renderJobList}</div>
           </Grid.Column>
-          <Grid.Column width={5}>
+          <Grid.Column width={9}>
             <RightSideNav />
           </Grid.Column>
         </Grid.Row>

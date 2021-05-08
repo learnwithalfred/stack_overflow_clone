@@ -1,8 +1,13 @@
 import React from "react";
 import "./users.styles.css";
+import CompanyDetails from "../../components/company.card/company.details.card";
 
 const Index = () => {
-  return <>users page is here</>;
+  return (
+    <>
+      <CompanyDetails />
+    </>
+  );
 };
 
 export default Index;
