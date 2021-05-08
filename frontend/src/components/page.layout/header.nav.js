@@ -1,34 +1,49 @@
 import React from "react";
-import {
-  Button,
-  Menu,
-  Input,
-} from "semantic-ui-react";
+import { Button, Menu, Input, Image } from "semantic-ui-react";
+
+import { NavLink } from "react-router-dom";
 
 function HeaderNavigation() {
   return (
     <>
-      <>
-        <Menu  secondary size="small">
+      <Menu secondary size="small">
+        <Menu.Item>
+          <Menu.Item as="a">
+            {" "}
+            <NavLink to="/">
+              <Image
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Stack_Overflow_logo.svg/1280px-Stack_Overflow_logo.svg.png"
+                size="small"
+                verticalAlign="top"
+              />
+            </NavLink>
+          </Menu.Item>
+          <Menu.Item color="black" as="a">
+            {" "}
+            <NavLink to="/jobs">Jobs</NavLink>{" "}
+          </Menu.Item>
+          <Menu.Item as="a">
+            {" "}
+            <NavLink to="/companies">Companies</NavLink>
+          </Menu.Item>
           <Menu.Item>
-            <Menu.Item as="a">Home</Menu.Item>
-            <Menu.Item as="a">Work</Menu.Item>
-            <Menu.Item as="a">Company</Menu.Item>
-            <Menu.Item as="a">Careers</Menu.Item>
-            <Menu.Item as="a">Log in</Menu.Item>
-            <Menu.Item as="a">Sign Up</Menu.Item>
-            <Menu.Item>
-              <Input icon="search" placeholder="Search..." />
-            </Menu.Item>
+            <Input
+              style={{ width: "600px" }}
+              color="blue"
+              icon="search"
+              placeholder="Search..."
+            />
           </Menu.Item>
-          <Menu.Item position="right">
-            <Button as="a">Log in</Button>
-            <Button as="a" style={{ marginLeft: "0.5em" }}>
-              Sign Up
-            </Button>
-          </Menu.Item>
-        </Menu>
-      </>
+        </Menu.Item>
+        <Menu.Item position="right">
+          <Button basic color="blue" as="a">
+            Log in
+          </Button>
+          <Button primary as="a" style={{ marginLeft: "0.5em" }}>
+            Sign Up
+          </Button>
+        </Menu.Item>
+      </Menu>
     </>
   );
 }
