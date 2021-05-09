@@ -1,0 +1,22 @@
+.comapny-image-card{
+    width: 100%;
+}
+
+.mini-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.join-us-details{
+    margin-top: 50px;
+}
+.icon-spaced-out{
+    margin-top: 20px;
+}
+
+.company-mini-description{
+    font-size: larger;
+    margin-top: 20px;
+}
