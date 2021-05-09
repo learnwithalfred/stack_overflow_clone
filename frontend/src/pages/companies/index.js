@@ -8,9 +8,6 @@ import LeftSideNav from "../../components/page.layout/left.side.nav";
 import { Grid } from "semantic-ui-react";
 import Footer from "../../components/page.layout/footer";
 
-
-
-
 const Index = (props) => {
   const renderCompanyCard = props.companies.map((company) => {
     return <CompanyCard company={company} key={company.id} />;

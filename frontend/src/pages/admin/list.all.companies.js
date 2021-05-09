@@ -1,22 +1,21 @@
 import React from "react";
 import { Button, Icon, Table } from "semantic-ui-react";
-import JobTable from "./job.table";
-
+import CompanyTable from "./company.table";
 const AllJobList = (props) => {
-  const renderCompanyCard = props.jobs.map((job) => {
-    return <JobTable job={job} key={job.id} />;
+  //console.log("my propas", props)
+
+  const renderCompanyCard = props.companies.map((company) => {
+    return <CompanyTable company={company} key={company.id} />;
   });
 
-  // console.log("re", props);
-  // const { aboutCompany, companyName, companyPicture, _id } = props.jobs;
   return (
     <Table compact celled>
       <Table.Header>
         <Table.Row>
-          <Table.HeaderCell>Name</Table.HeaderCell>
-          <Table.HeaderCell>Registration Date</Table.HeaderCell>
-          <Table.HeaderCell>E-mail address</Table.HeaderCell>
-          <Table.HeaderCell>Premium Plan</Table.HeaderCell>
+          <Table.HeaderCell>Compan Name</Table.HeaderCell>
+          <Table.HeaderCell>About</Table.HeaderCell>
+
+          <Table.HeaderCell>More</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
 

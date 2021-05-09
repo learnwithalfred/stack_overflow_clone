@@ -115,6 +115,8 @@ const App = () => {
                 {...props}
                 addJobHandler={addJobHandler}
                 handleNewCompany={handleNewCompany}
+                jobs={jobs}
+                companies={company}
               />
             )}
           />

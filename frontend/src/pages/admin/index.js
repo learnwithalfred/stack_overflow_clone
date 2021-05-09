@@ -3,24 +3,25 @@ import NewJobForm from "../../components/new.job.form";
 import NewCompanyForm from "../../components/new.company.form";
 import TopNavigation from "../../components/page.layout/header.nav";
 import RightSideNav from "../../components/page.layout/right.nav.card";
-import LeftSideCard from "../../components/page.layout/left.side.card";
-import LeftSideNav from "../../components/page.layout/left.side.nav";
-import { Container, Grid } from "semantic-ui-react";
+import { Grid } from "semantic-ui-react";
 import Footer from "../../components/page.layout/footer";
+import ListAllJobs from "./list.all.jobs";
+import ListAllCompanies from "./list.all.companies";
 
-
-function Index(props) {
+const Index = (props) => {
+  const { jobs, companies, addJobHandler, handleNewCompany } = props;
   return (
     <>
       <TopNavigation />
       <Grid padded>
         <Grid.Row>
-          <Grid.Column width={8}>
+          <Grid.Column width={12}>
             <div>
               <h1>Admin Dashboard</h1>
-
-              <NewJobForm addJobHandler={props.addJobHandler} />
-              <NewCompanyForm handleNewCompany={props.handleNewCompany} />
+              <ListAllJobs jobs={jobs} />
+              <ListAllCompanies companies={companies} />
+              <NewJobForm addJobHandler={addJobHandler} />
+              <NewCompanyForm handleNewCompany={handleNewCompany} />
             </div>
           </Grid.Column>
           <Grid.Column width={4}>
@@ -31,6 +32,6 @@ function Index(props) {
       <Footer />
     </>
   );
-}
+};
 
 export default Index;
