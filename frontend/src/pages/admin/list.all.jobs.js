@@ -6,17 +6,14 @@ const AllJobList = (props) => {
   const renderCompanyCard = props.jobs.map((job) => {
     return <JobTable job={job} key={job.id} />;
   });
-
-  // console.log("re", props);
-  // const { aboutCompany, companyName, companyPicture, _id } = props.jobs;
   return (
     <Table compact celled>
       <Table.Header>
         <Table.Row>
-          <Table.HeaderCell>Name</Table.HeaderCell>
-          <Table.HeaderCell>Registration Date</Table.HeaderCell>
-          <Table.HeaderCell>E-mail address</Table.HeaderCell>
-          <Table.HeaderCell>Premium Plan</Table.HeaderCell>
+          <Table.HeaderCell>Company Name</Table.HeaderCell>
+          <Table.HeaderCell>Applicants Type</Table.HeaderCell>
+          <Table.HeaderCell>Role</Table.HeaderCell>
+          <Table.HeaderCell>Read More</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
 

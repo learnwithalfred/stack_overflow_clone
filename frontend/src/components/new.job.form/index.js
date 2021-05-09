@@ -10,7 +10,7 @@ const options = [
 
 const roles = [
   { key: "front end", text: "Front End", value: "front end" },
-  { key: "back end", text: "Back End", value: "back end" },
+  { key: "back end", text: "Back End", value: "backend" },
   { key: "full stack", text: "Full Stack", value: "full stack" },
   { key: "Other", text: "Other", value: "Other" },
 ];
@@ -72,8 +72,11 @@ const Index = (props) => {
           label="Details About JOb"
           placeholder="Job Description"
           name="jobDescription"
+          style={{ minHeight: 174 }}
         />
-          <Button fluid primary type="submit">Add New Job</Button>
+        <Button fluid primary type="submit">
+          Add New Job
+        </Button>
       </Form>
     </>
   );

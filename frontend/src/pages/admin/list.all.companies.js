@@ -12,7 +12,7 @@ const AllJobList = (props) => {
     <Table compact celled>
       <Table.Header>
         <Table.Row>
-          <Table.HeaderCell>Compan Name</Table.HeaderCell>
+          <Table.HeaderCell>Company Name</Table.HeaderCell>
           <Table.HeaderCell>About</Table.HeaderCell>
 
           <Table.HeaderCell>More</Table.HeaderCell>

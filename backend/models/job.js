@@ -11,18 +11,15 @@ const jobSchema = mongoose.Schema(
       type: Date,
       default: Date.now(),
     },
-    jobType: { type: String, default: "Full-time" },
+    jobType: { type: String },
     experienceLevel: {
       type: String,
-      default: "Mid-Level",
     },
     role: {
       type: String,
-      default: "Frontend Developer",
     },
     jobDescription: {
       type: String,
-      default: "",
     },
   },
   { timestamps: true }
@@ -36,4 +33,3 @@ jobSchema.set("toJSON", {
   virtuals: true,
 });
 exports.Job = mongoose.model("Job", jobSchema);
-

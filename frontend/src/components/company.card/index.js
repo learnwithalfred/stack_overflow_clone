@@ -12,6 +12,7 @@ const Index = (props) => {
     aboutCompany,
   } = props.company;
 
+  
 
   return (
     <>

@@ -28,7 +28,7 @@ function HeaderNavigation() {
           </Menu.Item>
           <Menu.Item>
             <Input
-              style={{ width: "600px" }}
+              style={{ width: "300px" }}
               color="blue"
               icon="search"
               placeholder="Search..."

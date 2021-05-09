@@ -1,12 +1,11 @@
 import React from "react";
 import { Icon, Table } from "semantic-ui-react";
-const CompanyTable = (props) => {
-  console.log(
-    "job job osdafjhfaguifdlhahjdhsahdjlahdjhfl table props",
-    props.job
-  );
+import {Link} from "react-router-dom"
 
-  const { name, role, experienceLevel } = props.job;
+
+
+const CompanyTable = (props) => {
+  const {id, name, role, experienceLevel } = props.job;
   return (
     <>
       <Table.Row>
@@ -14,11 +13,16 @@ const CompanyTable = (props) => {
         <Table.Cell>{experienceLevel}</Table.Cell>
         <Table.Cell>{role}</Table.Cell>
         <Table.Cell>
-          <Icon name="hand point right outline" />
+          <Link to={{ pathname: `/jobs/${id}`, state: { jobs: props.job } }}>
+            <Icon size="large" name="hand point right outline" />
+          </Link>
         </Table.Cell>
       </Table.Row>
     </>
   );
 };
+
+
+
 
 export default CompanyTable;

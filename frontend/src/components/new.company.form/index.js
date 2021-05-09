@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Checkbox, TextArea, Form } from "semantic-ui-react";
+import { Button, TextArea, Form } from "semantic-ui-react";
 
 const Index = (props) => {
   let initialState = {
@@ -23,7 +23,6 @@ const Index = (props) => {
 
   return (
     <>
-      create new company page
       <Form onSubmit={handleSubmit}>
         <Form.Field>
           <label>Company Name</label>

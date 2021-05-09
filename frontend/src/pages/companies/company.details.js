@@ -1,7 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import TopNavigation from "../../components/page.layout/header.nav";
-import LeftSideCard from "../../components/page.layout/left.side.card";
 import LeftSideNav from "../../components/page.layout/left.side.nav";
 import { Grid, Menu, Image, Button, Icon, Card } from "semantic-ui-react";
 import Footer from "../../components/page.layout/footer";
@@ -14,7 +13,6 @@ const Details = (props) => {
     briefIntro,
     companyPicture,
     aboutCompany,
-    createAt,
   } = props.location.state.companies;
   return (
     <>
