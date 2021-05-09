@@ -3,6 +3,8 @@ import { Card, Item, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import "./job.card.styles.css";
 
+
+
 const Index = (props) => {
   const { id, name, role, jobDescription } = props.job;
   return (
