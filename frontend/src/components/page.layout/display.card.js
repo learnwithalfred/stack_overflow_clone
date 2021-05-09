@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, Item } from "semantic-ui-react";
 
-const ItemExampleItems = () => (
+const Index = () => (
   <Item.Group>
     <Item>
       <Item.Image size="tiny" src="https://i.stack.imgur.com/pG1OB.jpg?s=64" />
@@ -21,4 +21,4 @@ const ItemExampleItems = () => (
   </Item.Group>
 );
 
-export default ItemExampleItems;
+export default Index;

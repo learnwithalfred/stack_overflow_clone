@@ -1,9 +1,9 @@
 import React from "react";
 import { Button, Card } from "semantic-ui-react";
 import "./page.layout.styles.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const CardExampleExtraContent = () => (
+const NavCard = () => (
   <Card centered fluid>
     <div className="center-card">
       <h3>Are you looking for a job?</h3>
@@ -13,10 +13,10 @@ const CardExampleExtraContent = () => (
       </center>
 
       <Button size="masive" basic color="blue">
-        <Link to="/admin">Create a Developer Story</Link>
+        <NavLink to="/admin">Create a Developer Story</NavLink>
       </Button>
     </div>
   </Card>
 );
 
-export default CardExampleExtraContent;
+export default NavCard;

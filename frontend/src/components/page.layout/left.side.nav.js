@@ -26,6 +26,9 @@ function RightSideNav() {
       <Grid.Column width={13}>
         <Image src="https://react.semantic-ui.com/images/wireframe/centered-paragraph.png" />
       </Grid.Column>
+
+
+      
     </Grid.Row>
   );
 }

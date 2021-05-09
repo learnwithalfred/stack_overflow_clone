@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Card, Image, Button } from "semantic-ui-react";
 
 
-const CardExampleExtraContent = () => (
+const Index = () => (
   <>
     <Card.Content extra>
       <h5>Teams</h5>
@@ -26,4 +26,4 @@ const CardExampleExtraContent = () => (
   </>
 );
 
-export default CardExampleExtraContent;
+export default Index;

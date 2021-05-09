@@ -90,7 +90,9 @@ const App = () => {
     <Router>
       <div>
         <Switch>
-          <Route path="/" exact render={() => <Home />} />
+          <Route path="/" exact render={(props) => <Jobs {...props} jobs={jobs} />}
+
+          />
           <Route
             path="/companies"
             exact

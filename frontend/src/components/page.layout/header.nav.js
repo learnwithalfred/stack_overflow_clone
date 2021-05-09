@@ -37,10 +37,10 @@ function HeaderNavigation() {
         </Menu.Item>
         <Menu.Item position="right">
           <Button basic color="blue" as="a">
-            Log in
+            <NavLink to="/admin"> Log in</NavLink>
           </Button>
           <Button primary as="a" style={{ marginLeft: "0.5em" }}>
-            Sign Up
+            Sign up
           </Button>
         </Menu.Item>
       </Menu>

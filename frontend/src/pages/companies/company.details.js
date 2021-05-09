@@ -19,11 +19,10 @@ const Details = (props) => {
   return (
     <>
       <TopNavigation />
-      <Grid celled>
-        <LeftSideNav />
+      <Grid padded>
         <Grid.Row>
           <Grid.Column width={3}>
-            <LeftSideCard />
+            <LeftSideNav/>
           </Grid.Column>
           <Grid.Column width={13}>
             <Grid.Row>
