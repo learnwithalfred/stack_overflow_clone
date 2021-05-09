@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { Button, Checkbox, TextArea, Form } from "semantic-ui-react";
 
-const Index =(props)=> {
-  const initialState = {
+const Index = (props) => {
+  let initialState = {
     companyName: "",
     briefIntro: "",
     aboutCompany: "",
-    companyPicture: ""
+    companyPicture: "",
   };
 
   const [company, SetCompany] = useState(initialState);
@@ -18,42 +19,62 @@ const Index =(props)=> {
     e.preventDefault();
     props.handleNewCompany(company);
     SetCompany(initialState);
-    props.history.push("/");
   };
 
-
-    return (
-      <>
-        create new company page
-        <form onSubmit={handleSubmit}>
+  return (
+    <>
+      create new company page
+      <Form onSubmit={handleSubmit}>
+        <Form.Field>
+          <label>Company Name</label>
           <input
+            required
             type="text"
             name="companyName"
-            placeholder="companyName"
+            placeholder="Company Name"
             onChange={handleChange("companyName")}
           />
+        </Form.Field>
+
+        <Form.Field>
+          <label>Brief Intro About Company</label>
           <input
+            required
             type="text"
             name="briefIntro"
             onChange={handleChange("briefIntro")}
-            placeholder="briefIntro"
+            placeholder="Brief Intro About Company"
           />
+        </Form.Field>
+
+        <Form.Field>
+          <label>Company Picture URL</label>
           <input
+            required
             type="text"
             name="companyPicture"
             onChange={handleChange("companyPicture")}
-            placeholder="companyPicture"
+            placeholder="image url"
           />
-          <input
+        </Form.Field>
+
+        <Form.Field>
+          <label>Company Details</label>
+          <TextArea
             type="text"
             name="aboutCompany"
             onChange={handleChange("aboutCompany")}
-            placeholder="aboutCompany"
+            placeholder="Tell Us a lot about your company"
+            style={{ minHeight: 100 }}
           />
-          <input type="submit" value="create company" />
-        </form>
-      </>
-    );
-}
+        </Form.Field>
+        {/* <input type="submit" value="create company" /> */}
+        <Button fluid primary type="submit">
+          Add New Company
+        </Button>
+      </Form>
+    </>
+  );
+};
 
-export default Index
+export default Index;

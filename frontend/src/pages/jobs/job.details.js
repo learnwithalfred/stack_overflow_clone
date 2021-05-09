@@ -7,12 +7,7 @@ import { Grid, Menu, Image, Button, Icon } from "semantic-ui-react";
 import Footer from "../../components/page.layout/footer";
 import { Link } from "react-router-dom";
 const Details = (props) => {
-  const {
-    name,
-    jobType,
-    role,
-    jobDescription,
-  } = props.location.state.jobs;
+  const { name, jobType, role, jobDescription } = props.location.state.jobs;
 
   return (
     <>
@@ -55,19 +50,19 @@ const Details = (props) => {
 
             <div style={{ marginTop: "30px" }}>
               <Menu pointing>
-                <Link>
+                <Link to="/admin">
                   {" "}
                   <Menu.Item>Overview</Menu.Item>
                 </Link>
-                <Link>
+                <Link to="/admin">
                   {" "}
                   <Menu.Item>Company</Menu.Item>
                 </Link>
                 <Menu.Menu position="right">
-                  <Link>
+                  <Link to="/admin">
                     <Menu.Item name="React to this job:" />
                   </Link>
-                  <Link>
+                  <Link to="/admin">
                     <Menu.Item>
                       <Icon name="thumbs up" />: 0
                       <Icon style={{ marginLeft: "15px" }} name="thumbs down" />

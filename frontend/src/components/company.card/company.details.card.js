@@ -48,20 +48,20 @@ function CompanyDetailsComponent() {
               <div style={{ marginTop: "30px" }}>
                 {/* simpple menu goes here */}
 
-                <Menu pointing>
-                  <Link>
+                <Menu secondary>
+                  <Link to="/admin">
                     {" "}
                     <Menu.Item>Overview</Menu.Item>
                   </Link>
-                  <Link>
+                  <Link to="/admin">
                     {" "}
                     <Menu.Item>Company</Menu.Item>
                   </Link>
                   <Menu.Menu position="right">
-                    <Link>
+                    <Link to="/admin">
                       <Menu.Item name="React to this job:" />
                     </Link>
-                    <Link>
+                    <Link to="/admin">
                       <Menu.Item>
                         <Icon name="thumbs up" />: 0
                         <Icon

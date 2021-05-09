@@ -22,7 +22,7 @@ const Details = (props) => {
       <Grid padded>
         <Grid.Row>
           <Grid.Column width={3}>
-            <LeftSideNav/>
+            <LeftSideNav />
           </Grid.Column>
           <Grid.Column width={13}>
             <Grid.Row>
@@ -57,21 +57,18 @@ const Details = (props) => {
                 </div>
 
                 <div style={{ marginTop: "30px" }}>
-                  <Menu secondary>
-                    <Link>
-                      {" "}
-                      <Menu.Item>About</Menu.Item>
-                    </Link>
-                    <Link>
-                      {" "}
+                  <Menu>
+                    <Menu.Item>
+                      <Link to="/">About</Link>
+                    </Menu.Item>
+
+                    <Link to="/">
                       <Menu.Item>Stack</Menu.Item>
                     </Link>
-                    <Link>
-                      {" "}
+                    <Link to="/">
                       <Menu.Item>Jobs</Menu.Item>
                     </Link>
                   </Menu>
-                  {/* end of simple menu */}
                 </div>
               </Grid.Column>
             </Grid.Row>
@@ -98,7 +95,7 @@ const Details = (props) => {
             <Card fluid>
               <Card.Content>
                 <h5>WEBSITE</h5>
-                <Link>finn.io</Link>
+                <Link to="/admin">finn.io</Link>
                 <h5>INDUSTRY</h5>
                 <Card.Description>
                   Agile Software Development, Automotive, Mobility

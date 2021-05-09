@@ -5,7 +5,7 @@ import {
   Redirect,
 } from "react-router-dom";
 
-import Home from "./pages/home";
+// import Home from "./pages/home";
 import Companies from "./pages/companies";
 import CompanyDetails from "./pages/companies/company.details";
 import Jobs from "./pages/jobs";
@@ -20,7 +20,7 @@ import React, { useEffect, useState } from "react";
 const App = () => {
   const [company, setCompany] = useState([]);
   const [jobs, setJobs] = useState([]);
- const [question, setQuestion] = useState([]);
+  const [question, setQuestion] = useState([]);
 
   //fetch jobs
   const fetchJobs = async () => {
@@ -62,13 +62,14 @@ const App = () => {
   }, []);
 
   //create new company
-  const handleNewCompany = async (company) => {
+  const handleNewCompany = async (newCompany) => {
+    console.log(newCompany);
     const request = {
-      ...company,
+      ...newCompany,
     };
 
     const response = await api.post("/company", request);
-    setJobs([...company, response.data]);
+    setCompany([...company, response.data]);
   };
 
   // //fetch question
@@ -90,8 +91,10 @@ const App = () => {
     <Router>
       <div>
         <Switch>
-          <Route path="/" exact render={(props) => <Jobs {...props} jobs={jobs} />}
-
+          <Route
+            path="/"
+            exact
+            render={(props) => <Jobs {...props} jobs={jobs} />}
           />
           <Route
             path="/companies"

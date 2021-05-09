@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function CompanyDetailsComponent() {
   return (
     <>
-      <div style={{margin:"50px"}}>
+      <div style={{ margin: "50px" }}>
         <div style={{ display: "flex", alignItems: "center" }}>
           <div>
             <Image
@@ -36,18 +36,18 @@ function CompanyDetailsComponent() {
         </div>
 
         <div style={{ marginTop: "30px" }}>
-          <Menu >
-            <Link>
+          <Menu>
+            <Link to="/admin">
               <Menu.Item>Overview</Menu.Item>
             </Link>
-            <Link>
+            <Link to="/admin">
               <Menu.Item>Company</Menu.Item>
             </Link>
             <Menu.Menu position="right">
-              <Link>
+              <Link to="/admin">
                 <Menu.Item name="React to this job:" />
               </Link>
-              <Link>
+              <Link to="/admin">
                 <Menu.Item>
                   <Icon name="thumbs up" />: 0
                   <Icon style={{ marginLeft: "15px" }} name="thumbs down" />
