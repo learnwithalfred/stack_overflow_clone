@@ -1,18 +1,21 @@
 import React from "react";
-import { Card, Icon } from "semantic-ui-react";
-
-const description = [
-  "Amy is a violinist with 2 years experience in the wedding industry.",
-  "She enjoys the outdoors and currently resides in upstate New York.",
-].join(" ");
+import { Button, Card } from "semantic-ui-react";
+import "./page.layout.styles.css";
+import { Link } from "react-router-dom";
 
 const CardExampleExtraContent = () => (
-  <Card fluid>
-    <Card.Content header="About Amy" />
-    <Card.Content description={description} />
-    <Card.Content extra>
-      <Icon name="user" />4 Friends
-    </Card.Content>
+  <Card centered fluid>
+    <div className="center-card">
+      <h3>Are you looking for a job?</h3>
+      <center className="styled-paragraph">
+        When you create a Developer Story, we’ll accelerate your matches and get
+        you in front of employers ASAP.
+      </center>
+
+      <Button size="masive" basic color="blue">
+        <Link to="/admin">Create a Developer Story</Link>
+      </Button>
+    </div>
   </Card>
 );
 

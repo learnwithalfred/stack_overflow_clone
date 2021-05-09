@@ -5,3 +5,16 @@ Link, a{
 .mini-description-card{
   margin: 10px;
 }
+
+.center-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.styled-paragraph{
+  font-size: 17px;
+  align-self: center;
+  margin-bottom: 20px;
+}
