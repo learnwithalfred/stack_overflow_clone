@@ -56,7 +56,9 @@ const App = () => {
   useEffect(() => {
     const companyList = async () => {
       const allCampanies = await fetchCompanyData();
-      if (allCampanies) setCompany(allCampanies);
+      if (allCampanies) {
+        setCompany(allCampanies);
+      }
     };
     companyList();
   }, []);

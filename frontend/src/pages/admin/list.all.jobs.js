@@ -6,6 +6,7 @@ const AllJobList = (props) => {
   const renderCompanyCard = props.jobs.map((job) => {
     return <JobTable job={job} key={job.id} />;
   });
+
   return (
     <Table compact celled>
       <Table.Header>

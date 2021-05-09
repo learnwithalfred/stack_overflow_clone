@@ -11,6 +11,7 @@ const Index = (props) => {
   return (
     <>
       <div style={{ padding: "50px 150px 30px 150px" }}>
+      
         <div>
           <Menu>
             <Menu.Item id="browse">Browse</Menu.Item>

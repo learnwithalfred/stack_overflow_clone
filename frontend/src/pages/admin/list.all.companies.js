@@ -19,7 +19,7 @@ const AllJobList = (props) => {
         </Table.Row>
       </Table.Header>
 
-      <Table.Body>{renderCompanyCard}</Table.Body>
+      <Table.Body>{renderCompanyCard }</Table.Body>
 
       <Table.Footer fullWidth>
         <Table.Row>
