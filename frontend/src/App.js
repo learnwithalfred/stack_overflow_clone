@@ -37,9 +37,10 @@ const App = () => {
   }, []);
 
   //create new job
-  const addJobHandler = async (job) => {
+  const addJobHandler = async (newJob) => {
+    console.log("new job details is ....", newJob);
     const request = {
-      ...job,
+      ...newJob,
     };
 
     const response = await api.post("/jobs", request);
@@ -65,7 +66,7 @@ const App = () => {
 
   //create new company
   const handleNewCompany = async (newCompany) => {
-    console.log(newCompany);
+    //console.log(newCompany);
     const request = {
       ...newCompany,
     };

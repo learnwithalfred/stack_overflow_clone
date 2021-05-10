@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Icon, Table } from "semantic-ui-react";
+import { Table } from "semantic-ui-react";
 import CompanyTable from "./company.table";
 const AllJobList = (props) => {
   //console.log("my propas", props)
@@ -21,21 +21,6 @@ const AllJobList = (props) => {
 
       <Table.Body>{renderCompanyCard }</Table.Body>
 
-      <Table.Footer fullWidth>
-        <Table.Row>
-          <Table.HeaderCell colSpan="4">
-            <Button
-              floated="right"
-              icon
-              labelPosition="left"
-              primary
-              size="small"
-            >
-              <Icon name="user" /> Add User
-            </Button>
-          </Table.HeaderCell>
-        </Table.Row>
-      </Table.Footer>
     </Table>
   );
 };

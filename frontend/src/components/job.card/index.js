@@ -6,7 +6,7 @@ import "./job.card.styles.css";
 
 
 const Index = (props) => {
-  const { id, name, role, jobDescription } = props.job;
+  const { id, name, role, jobDescription, jobType } = props.job;
   return (
     <>
       <Card fluid>
@@ -30,7 +30,7 @@ const Index = (props) => {
                       <div className="move-icon-right">
                         <Icon name="tty" />
                       </div>
-                      <Item.Meta> Software Development</Item.Meta>
+                      <Item.Meta>{jobType} </Item.Meta>
                     </div>
                   </Item.Extra>
                   <Item.Meta>{jobDescription}</Item.Meta>

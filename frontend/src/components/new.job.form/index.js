@@ -1,40 +1,24 @@
 import React, { useState } from "react";
 import { Button, Form } from "semantic-ui-react";
 
-const options = [
-  { key: "fullTime", text: "Full Time", value: "fullTime" },
-  { key: "partTime", text: "Part Time", value: "partTime" },
-  { key: "contract", text: "Contract", value: "contract" },
-];
-
-
-const roles = [
-  { key: "front end", text: "Front End", value: "front end" },
-  { key: "back end", text: "Back End", value: "backend" },
-  { key: "full stack", text: "Full Stack", value: "full stack" },
-  { key: "Other", text: "Other", value: "Other" },
-];
-
-
-
 const Index = (props) => {
   const initialState = {
     name: "",
     jobType: "",
     role: "",
     jobDescription: "",
+    experienceLevel:"",
   };
 
   const [job, SetJobs] = useState(initialState);
   const handleChange = (name) => (event) => {
-    SetJobs({ ...job, [name]: event.target.value });
+    SetJobs({ ...job, [name]: event.target.value, id: Date.now });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     props.addJobHandler(job);
     SetJobs(initialState);
-
   };
 
   return (
@@ -46,33 +30,70 @@ const Index = (props) => {
             type="text"
             placeholder="Job name"
             name="name"
+            value={job.name}
             onChange={handleChange("name")}
           />
         </Form.Field>
         <Form.Group widths="equal">
-          <Form.Select
-            fluid
+          <Form.Field
+            type="text"
             label="Roles"
-            options={roles}
+            value={job.role}
             placeholder="Roles"
             name="role"
             onChange={handleChange("role")}
-          />
+            control="select"
+          >
+            <option value="">--Please Select Role--</option>
+            <option value="Front End Developer">Front End Developer</option>
+            <option value="Back End Developer">Back End Developer</option>
+            <option value="Full Stack Developer">Full Stack Developer</option>
+            <option value="Other">Other</option>
+          </Form.Field>
 
-          <Form.Select
+          <Form.Field
             fluid
+            type="text"
             label="Job Type"
-            options={options}
             placeholder="Job Type"
             name="jobType"
+            value={job.jobType}
             onChange={handleChange("jobType")}
-          />
+            control="select"
+          >
+            <option value="">--Please Select Job Type--</option>
+            <option value="Part Time">Part Time</option>
+            <option value="Full Time">Full Time</option>
+            <option value="Contact">Contact</option>
+            <option value="Other">Other</option>
+          </Form.Field>
         </Form.Group>
+
+        <Form.Field
+          fluid
+          type="text"
+          label="Experience Level"
+          placeholder="Experience Level"
+          name="experienceLevel"
+          value={job.experienceLevel}
+          onChange={handleChange("experienceLevel")}
+          control="select"
+        >
+          <option value="">--Please Select Experience Level--</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Senior">Senior</option>
+          <option value="Other">Other</option>
+        </Form.Field>
+
         <Form.TextArea
+          type="text"
           label="Details About JOb"
           placeholder="Job Description"
           name="jobDescription"
-          style={{ minHeight: 174 }}
+          value={job.jobDescription}
+          style={{ minHeight: 100 }}
+          onChange={handleChange("jobDescription")}
         />
         <Button fluid primary type="submit">
           Add New Job

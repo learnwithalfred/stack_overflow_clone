@@ -13,7 +13,7 @@ const jobSchema = mongoose.Schema(
     },
     jobType: { type: String },
     experienceLevel: {
-      type: String,
+      type: String
     },
     role: {
       type: String,

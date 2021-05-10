@@ -31,6 +31,7 @@ const Index = (props) => {
             type="text"
             name="companyName"
             placeholder="Company Name"
+            value={company.companyName}
             onChange={handleChange("companyName")}
           />
         </Form.Field>
@@ -41,6 +42,7 @@ const Index = (props) => {
             required
             type="text"
             name="briefIntro"
+            value={company.briefIntro}
             onChange={handleChange("briefIntro")}
             placeholder="Brief Intro About Company"
           />
@@ -52,6 +54,7 @@ const Index = (props) => {
             required
             type="text"
             name="companyPicture"
+            value={company.companyPicture}
             onChange={handleChange("companyPicture")}
             placeholder="image url"
           />
@@ -62,12 +65,12 @@ const Index = (props) => {
           <TextArea
             type="text"
             name="aboutCompany"
+            value={company.aboutCompany}
             onChange={handleChange("aboutCompany")}
             placeholder="Tell Us a lot about your company"
             style={{ minHeight: 100 }}
           />
         </Form.Field>
-        {/* <input type="submit" value="create company" /> */}
         <Button fluid primary type="submit">
           Add New Company
         </Button>
