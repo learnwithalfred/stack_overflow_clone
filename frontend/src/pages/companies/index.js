@@ -7,7 +7,7 @@ import LeftSideCard from "../../components/page.layout/left.side.card";
 import LeftSideNav from "../../components/page.layout/left.side.nav";
 import { Grid } from "semantic-ui-react";
 import Footer from "../../components/page.layout/footer";
-
+import LoadingData from "../../components/loading";
 const Index = (props) => {
   const renderCompanyCard = props.companies.map((company) => {
     return <CompanyCard company={company} key={company.id} />;
@@ -22,7 +22,7 @@ const Index = (props) => {
             <LeftSideCard />
           </Grid.Column>
           <Grid.Column width={8}>
-            <div>{renderCompanyCard}</div>
+            {renderCompanyCard.length > 0 ? renderCompanyCard : <LoadingData />}
           </Grid.Column>
           <Grid.Column width={5}>
             <RightSideNav />

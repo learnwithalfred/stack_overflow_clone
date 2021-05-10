@@ -1,6 +1,7 @@
 import React from "react";
-import {Table } from "semantic-ui-react";
+import { Table } from "semantic-ui-react";
 import JobTable from "./job.table";
+import LoadingData from "../../components/loading";
 
 const AllJobList = (props) => {
   const renderCompanyCard = props.jobs.map((job) => {
@@ -20,8 +21,9 @@ const AllJobList = (props) => {
         </Table.Row>
       </Table.Header>
 
-      <Table.Body>{renderCompanyCard}</Table.Body>
-
+      <Table.Body>
+        {renderCompanyCard.length > 0 ? renderCompanyCard : <LoadingData />}
+      </Table.Body>
     </Table>
   );
 };
