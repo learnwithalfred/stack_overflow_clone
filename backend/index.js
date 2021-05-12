@@ -19,7 +19,8 @@ app.use("/company", companyRoutes);
 app.use("/questions", questionRoutes);
 app.use("/jobs", jobRoutes);
 
-const CONNECTION_URL = process.env.DATABASE_URL;
+const CONNECTION_URL =
+  "mongodb+srv://properalfred:CmzDl5m5X9UISm5J@cluster0.6nii1.mongodb.net/stack_clone_db?retryWrites=true&w=majority";
 const PORT = process.env.PORT || 5000;
 
 mongoose

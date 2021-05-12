@@ -4,7 +4,7 @@
   "description": "stack overflow clone server",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "author": "alfred boateng",
   "license": "ISC",
