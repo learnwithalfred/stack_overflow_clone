@@ -7,7 +7,7 @@ const CompanyTable = (props) => {
     <>
       <Table.Row>
         <Table.Cell>{companyName}</Table.Cell>
-        <Table.Cell>{briefIntro}</Table.Cell>
+        <Table.Cell>{briefIntro.slice(0, 50)}...</Table.Cell>
         <Table.Cell>
           <Link
             to={{

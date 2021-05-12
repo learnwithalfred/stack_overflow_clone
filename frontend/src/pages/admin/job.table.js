@@ -1,12 +1,8 @@
 import React from "react";
 import { Icon, Table } from "semantic-ui-react";
-import {Link} from "react-router-dom"
-
-
+import { Link } from "react-router-dom";
 
 const CompanyTable = (props) => {
-
-  console.log("confuesed levels", props)
   const { id, name, role, jobType, experienceLevel } = props.job;
   return (
     <>
@@ -25,8 +21,5 @@ const CompanyTable = (props) => {
     </>
   );
 };
-
-
-
 
 export default CompanyTable;

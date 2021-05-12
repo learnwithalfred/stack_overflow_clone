@@ -6,9 +6,14 @@ import LeftSideNav from "../../components/page.layout/left.side.nav";
 import { Grid, Menu, Image, Button, Icon } from "semantic-ui-react";
 import Footer from "../../components/page.layout/footer";
 import { Link } from "react-router-dom";
-const Details = (props) => {
-  const { name, jobType, role, jobDescription } = props.location.state.jobs;
 
+const Details = (props) => {
+  const {
+    name,
+    jobType,
+    role,
+    jobDescription,
+  } = props.location.state.jobs;
   return (
     <>
       <TopNavigation />
@@ -30,7 +35,7 @@ const Details = (props) => {
 
               <div style={{ marginLeft: "10px", fontSize: "16px" }}>
                 <div style={{ fontWeight: "bold", fontSize: "24px" }}>
-                  {name}
+                  {name.toUpperCase()}
                 </div>
                 <div>Filestage GmbH – No office location</div>
                 <div style={{ color: "orange" }}>Remote</div>
@@ -51,11 +56,9 @@ const Details = (props) => {
             <div style={{ marginTop: "30px" }}>
               <Menu pointing>
                 <Link to="/admin">
-                  {" "}
                   <Menu.Item>Overview</Menu.Item>
                 </Link>
                 <Link to="/admin">
-                  {" "}
                   <Menu.Item>Company</Menu.Item>
                 </Link>
                 <Menu.Menu position="right">
@@ -72,13 +75,7 @@ const Details = (props) => {
                   </Link>
                 </Menu.Menu>
               </Menu>
-              {/* end of simple menu */}
             </div>
-
-            {/* <Grid.Row>
-              <Grid.Column width={9}></Grid.Column>
-              <Grid.Column width={4}></Grid.Column>
-            </Grid.Row> */}
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
@@ -99,7 +96,7 @@ const Details = (props) => {
             <h5>Your mission</h5>
 
             <ul>
-              <li>{jobDescription}</li>
+              <li>{jobDescription.toUpperCase()}</li>
             </ul>
 
             <h3>You’re good at</h3>

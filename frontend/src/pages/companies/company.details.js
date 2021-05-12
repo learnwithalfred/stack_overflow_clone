@@ -77,9 +77,9 @@ const Details = (props) => {
           <Grid.Column width={8}>
             <div>
               <img
-                className="comapny-image-card"
                 src={companyPicture}
                 alt="https://i.stack.imgur.com/UdgNj.jpg"
+                className="comapny-image-card"
               />
               <ul>
                 <li className="company-mini-description">{briefIntro}</li>
