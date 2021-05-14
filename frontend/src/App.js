@@ -95,6 +95,11 @@ const App = () => {
       <div>
         <Switch>
           <Route
+            path="/"
+            exact
+            render={(props) => <Jobs {...props} jobs={jobs} />}
+          />
+          <Route
             path="/companies"
             exact
             render={(props) => <Companies {...props} companies={company} />}
@@ -109,10 +114,6 @@ const App = () => {
 
           <Route path="/jobs/:id" render={() => <JobDetails />} />
 
-          <Route exact path="/">
-            <Redirect to="/jobs" />
-          </Route>
-          
           <Route
             path="/admin"
             render={(props) => (

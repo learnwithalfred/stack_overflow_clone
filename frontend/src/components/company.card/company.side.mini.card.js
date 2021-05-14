@@ -133,7 +133,7 @@ function CompanyDetailsComponent() {
               whether you've advanced the application process.
             </li>
 
-            <h5>Our team is looking forward to getting to know you! ✌️</h5>
+            <h5>Our team is looking forward to getting to know you!</h5>
           </ul>
 
           <Button primary size="large">
