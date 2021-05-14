@@ -95,11 +95,6 @@ const App = () => {
       <div>
         <Switch>
           <Route
-            path="/"
-            exact
-            render={(props) => <Jobs {...props} jobs={jobs} />}
-          />
-          <Route
             path="/companies"
             exact
             render={(props) => <Companies {...props} companies={company} />}
@@ -131,6 +126,7 @@ const App = () => {
             render={(props) => <Question {...props} question={question} />}
           />
           <Route path="/users" component={Users} />
+          <Route path="/" render={(props) => <Jobs {...props} jobs={jobs} />} />
           <Route path="/404" component={NotFound} />
 
           <Redirect to="/404" />
