@@ -1,24 +1,16 @@
 {
-  "files": {
-    "main.css": "/stack_overflow_clone/static/css/main.d05000fa.chunk.css",
-    "main.js": "/stack_overflow_clone/static/js/main.30779b5f.chunk.js",
-    "main.js.map": "/stack_overflow_clone/static/js/main.30779b5f.chunk.js.map",
-    "runtime-main.js": "/stack_overflow_clone/static/js/runtime-main.8e0f8ab1.js",
-    "runtime-main.js.map": "/stack_overflow_clone/static/js/runtime-main.8e0f8ab1.js.map",
-    "static/css/2.0713da3f.chunk.css": "/stack_overflow_clone/static/css/2.0713da3f.chunk.css",
-    "static/js/2.f628a298.chunk.js": "/stack_overflow_clone/static/js/2.f628a298.chunk.js",
-    "static/js/2.f628a298.chunk.js.map": "/stack_overflow_clone/static/js/2.f628a298.chunk.js.map",
-    "index.html": "/stack_overflow_clone/index.html",
-    "static/css/2.0713da3f.chunk.css.map": "/stack_overflow_clone/static/css/2.0713da3f.chunk.css.map",
-    "static/css/main.d05000fa.chunk.css.map": "/stack_overflow_clone/static/css/main.d05000fa.chunk.css.map",
-    "static/js/2.f628a298.chunk.js.LICENSE.txt": "/stack_overflow_clone/static/js/2.f628a298.chunk.js.LICENSE.txt",
-    "static/media/semantic.min.css": "/stack_overflow_clone/static/media/outline-icons.ddae9b1b.woff"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.8e0f8ab1.js",
-    "static/css/2.0713da3f.chunk.css",
-    "static/js/2.f628a298.chunk.js",
-    "static/css/main.d05000fa.chunk.css",
-    "static/js/main.30779b5f.chunk.js"
-  ]
+  "main.css": "/stack_overflow_clone/static/css/main.3f29ef31.chunk.css",
+  "main.js": "/stack_overflow_clone/static/js/main.de848f55.chunk.js",
+  "main.js.map": "/stack_overflow_clone/static/js/main.de848f55.chunk.js.map",
+  "runtime~main.js": "/stack_overflow_clone/static/js/runtime~main.ef826049.js",
+  "runtime~main.js.map": "/stack_overflow_clone/static/js/runtime~main.ef826049.js.map",
+  "static/css/2.e2224ade.chunk.css": "/stack_overflow_clone/static/css/2.e2224ade.chunk.css",
+  "static/js/2.ad59097b.chunk.js": "/stack_overflow_clone/static/js/2.ad59097b.chunk.js",
+  "static/js/2.ad59097b.chunk.js.map": "/stack_overflow_clone/static/js/2.ad59097b.chunk.js.map",
+  "index.html": "/stack_overflow_clone/index.html",
+  "precache-manifest.af057bc02a379ac7e7eb5e9cc11e9861.js": "/stack_overflow_clone/precache-manifest.af057bc02a379ac7e7eb5e9cc11e9861.js",
+  "service-worker.js": "/stack_overflow_clone/service-worker.js",
+  "static/css/2.e2224ade.chunk.css.map": "/stack_overflow_clone/static/css/2.e2224ade.chunk.css.map",
+  "static/css/main.3f29ef31.chunk.css.map": "/stack_overflow_clone/static/css/main.3f29ef31.chunk.css.map",
+  "static/media/semantic.min.css": "/stack_overflow_clone/static/media/outline-icons.ef60a4f6.woff"
 }
