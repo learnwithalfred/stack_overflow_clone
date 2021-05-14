@@ -100,15 +100,19 @@ const App = () => {
             render={(props) => <Companies {...props} companies={company} />}
           />
           <Route path="/companies/:id" render={() => <CompanyDetails />} />
+
           <Route
             path="/jobs"
             exact
             render={(props) => <Jobs {...props} jobs={jobs} />}
           />
+
           <Route path="/jobs/:id" render={() => <JobDetails />} />
+
           <Route exact path="/">
             <Redirect to="/jobs" />
           </Route>
+          
           <Route
             path="/admin"
             render={(props) => (
