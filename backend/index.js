@@ -14,12 +14,12 @@ app.use(bodyParser.json());
 app.use(cors());
 app.options("*", cors());
 
-
 app.use("/company", companyRoutes);
 app.use("/questions", questionRoutes);
 app.use("/jobs", jobRoutes);
 
 const CONNECTION_URL = process.env.DATABASE_URL;
+
 const PORT = process.env.PORT || 5000;
 
 mongoose
